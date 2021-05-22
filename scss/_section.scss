@@ -1,0 +1,15 @@
+@import "variables";
+
+@import "section_inicio";
+@import "section_nosotros";
+@import "section_galeria";
+@import "section_beneficios";
+@import "section_contacto";
+
+main{
+    .section{
+        width: 100%;
+        min-height: 100vh;
+    }
+
+}

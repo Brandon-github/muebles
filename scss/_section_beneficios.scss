@@ -1,0 +1,66 @@
+@use "variables" as colores;
+
+#beneficios{
+    background: colores.$header_bg5;
+    
+    .beneficios_title{
+        margin-bottom: 20px;
+        padding-top: 80px;
+        font-size: 4.5em;
+        text-align: center;
+        color: colores.$header_text;
+    }
+
+    .beneficios_content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: calc(100% - 140px);
+        min-height: 100vh;
+        padding: 70px;
+
+        .content_box{
+            position: relative;
+            width: 100%;
+            height: 300px;
+            margin: 40px 0;
+
+            .box_img{
+                position: absolute;
+                top: 30px;
+                left: 0;
+                width: 30%;
+                height: 100%;
+            }
+
+            .box_text{
+                position: absolute;
+                top: 0;
+                left: 30%;
+                width: calc(70% - 140px);
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                padding: 10px 70px;
+                border-top: 1px solid colores.$header_text;
+
+                .text_title{
+                    font-size: 3em;
+                    color: colores.$header_text;
+                    text-transform: uppercase;
+                    margin-bottom: 30px;
+                    text-align: center;
+                }
+
+                .text_paragraph{
+                    font-size: 1.5em;
+                    color: colores.$header_text2;
+                    text-align: justify;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,112 @@
+@use "variables" as colores;
+
+#inicio{
+    background: url(../img/bench-accounting-nvzvOPQW0gc-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .inicio_content{
+        width: 600px;
+        height: 300px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 40px;
+        z-index: 2;
+
+        & > *{
+            margin: 10px 0;
+        }
+
+        h2{
+            font-size: 5em;
+        }
+
+        p{
+            text-align: justify;
+            font-size: 1.3em;
+        }
+    }
+
+    .inicio_message{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 400px;
+        height: 200px;
+        z-index: 999;
+        background: colores.$header_bg;
+        padding: 20px 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s linear;
+
+        & > *{
+            margin: 20px 0;
+        }
+
+        .message_title{
+            font-size: 2em;
+            font-weight: 700;
+            color: colores.$header_text;
+        }
+
+        .message_social{
+            margin-top: 25px;
+
+            a.social{
+                text-decoration: none;
+                color: colores.$header_bg2;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                padding: 15px;
+                border: 2px solid colores.$header_bg2;
+                border-radius: 50%;
+                position: relative;
+                margin: 0 10px;
+                transition: .3s linear;
+
+                &:hover{
+                    color: colores.$header_text;
+                    border-color: colores.$header_text;
+                }
+
+                & > i{
+                    font-size: 1.5em;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                }
+            }
+        }
+
+        .message_button{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 2em;
+            color: colores.$header_text;
+            transform: translate(-50%,-50%);
+            cursor: pointer;
+            transition: .3s linear;
+
+            &:hover{
+                color: colores.$header_bg2;
+            }
+        }
+    }
+}

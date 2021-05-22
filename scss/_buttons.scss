@@ -1,0 +1,19 @@
+@import "variables";
+
+button{
+    padding: 10px 20px;
+    font-weight: 700;
+    color: $header_text;
+    background: $header_bg2;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    border-radius: 10px;
+    cursor: pointer;
+    border-style: none;
+    transition: .3s linear;
+
+    &:hover{
+        background: $header_bg;
+        letter-spacing: 4px;
+    }
+}

@@ -1,0 +1,67 @@
+@import "variables";
+
+@mixin posicion_tarjeta($left) {
+    position: absolute;
+    top: 0;
+    left: $left;
+    width: 50%;
+    height: 100%;
+}
+
+#nosotros{
+    background: $header_bg2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .nosotros_content{
+        width: 1200px;
+        height: 500px;
+        background: $header_text;
+        overflow: hidden;
+        position: relative;
+
+        .nosotros_img{
+            @include posicion_tarjeta(0);
+            object-fit: cover;
+            pointer-events: none;
+        }
+
+        .nosotros_text{
+            @include posicion_tarjeta(50%);
+            background: $header_text;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .text_title{
+                font-size: 3.2em;
+                margin-bottom: 20px;
+            }
+
+            .text_paragraph{
+                margin: 0 50px;
+                text-align: justify;
+            }
+
+            .text_icons{
+                margin-top: 80px;
+
+                .icon{
+                    margin: 0 40px;
+                    cursor: pointer;
+
+                    & i{
+                        font-size: 2.5em;
+                        color: $header_bg2;
+                    }
+
+                    &:hover i{
+                        color: $header_bg4;
+                    }
+                }
+            }
+        }
+    }
+}
